@@ -1,20 +1,52 @@
+/* FONT FACE */
+@font-face {
+  font-family: "Fraunces , 144pt";
+  src: url("../fonts/Fraunces144pt-SemiBold.woff2") format("woff2"),
+    url("../fonts/Fraunces144pt-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Regular.woff2") format("woff2"),
+    url("../fonts/Manrope-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* CUSTOM PROPS */
+:root {
+  /* COLORS */
+  --dark-purple: #24053e;
+  --eucaplyptus: #44ffa1;
+  --davys-grey: #584d62;
+  --ghost-white: #fcf8ff;
+
+  /* FONTS */
+  --heading-font-family: "Fraunces 144pt", "Times New Roman", serif;
+  --body-font-family: "Manrope", "Arial", sans-serif;
+}
+
 /* GLOBAL */
+
 body {
   display: flex;
   flex-direction: column;
   padding: 0;
   margin: 0;
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  line-height: 32px;
   background-color: #fff;
-  color: #222;
+  color: var(--dark-purple);
 }
 
 img {
   height: auto;
 }
-
 
 /* AUTOFILL-STYLES */
 /*input:-webkit-autofill,
@@ -31,7 +63,6 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px #fff inset;
 }*/
 
-
 /* PLACEHOLDER-STYLES */
 /*::-webkit-input-placeholder,
 ::-moz-placeholder,
@@ -40,7 +71,6 @@ select:-webkit-autofill:focus {
   color: rgba(52, 49, 61, 0.5);
   opacity: 1;
 }*/
-
 
 /* VISUALLY-HIDDEN */
 .visually-hidden {
@@ -54,7 +84,6 @@ select:-webkit-autofill:focus {
   overflow: hidden;
 }
 
-
 /* CONTAINER */
 .container {
   width: 100%;
@@ -65,18 +94,15 @@ select:-webkit-autofill:focus {
   margin-right: auto;
 }
 
-
 /* MAIN-CONTENT */
 .main-content {
   flex-grow: 1;
 }
 
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) {
-
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
 }
